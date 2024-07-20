@@ -1,0 +1,74 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-footer {
+  background-color: #282c34;
+  padding: 20px;
+  font-size: calc(8px + 1vmin);
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+.bubble {
+  background-color: #cceeff;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #003366;
+  font-size: 1.2em;
+  animation: float 5s ease-in-out infinite;
+  transition: transform 0.2s;
+}
+
+.bubble:hover {
+  transform: scale(1.1);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.footer {
+  display: flex;
+  width: 200%; 
+  animation: scroll 60s linear infinite;
+}
+
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+li {
+  animation: fadeInUp 0.5s ease-out;
+}
